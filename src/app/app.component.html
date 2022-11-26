@@ -1,0 +1,20 @@
+<div class="main calcite-theme-dark">
+  <div class="header">
+    <div class="title">
+      <h2>Points of Interest</h2>
+    </div>
+    <div class="navigation">
+      <calcite-tab-nav slot="tab-nav">
+        <calcite-tab-title [routerLink]="['/']" [attr.selected]="currentRoute === '/'">Home</calcite-tab-title>
+        <calcite-tab-title [routerLink]="['/overview']" [attr.selected]="currentRoute === '/overview'">Overview
+        </calcite-tab-title>
+      </calcite-tab-nav>
+    </div>
+    <div class="logo">
+      <img src="./assets/logo.png" alt="logo">
+    </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

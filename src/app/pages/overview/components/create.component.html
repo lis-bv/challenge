@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="title">
+        <h1>Create a Point of Interest</h1>
+    </div>
+    <div class="map">
+        <lis-map (mapClicked)="onMapClicked($event)"></lis-map>
+    </div>
+    <form class="form" [formGroup]="createForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <label for="name">Name</label>
+            <input id="name" type="text" formControlName="name">
+        </div>
+        <div class="row">
+            <label for="description">Description</label>
+            <input id="description" type="text" formControlName="description">
+        </div>
+        <div class="row">
+            <calcite-button type="submit" [disabled]="!createForm.valid">
+                Create POI
+            </calcite-button>
+        </div>
+    </form>
+
+</div>
